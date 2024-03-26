@@ -25,7 +25,11 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.send("Halo Habibi")
+    res.render("index")
+
+})
+
+app.post("/", (req, res) => {
 
 })
 
