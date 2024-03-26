@@ -16,6 +16,19 @@ app.listen(PORT, () => {
 
 })
 
+// parse html data for POST requests
+app.use(express.urlencoded({
+    extended: true
+
+}))
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+    res.send("Halo Habibi")
+
+})
+
 // set template engines
 app.set("view engine", "ejs");
 app.use(express.static("public)"));
