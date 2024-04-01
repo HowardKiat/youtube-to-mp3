@@ -9,5 +9,32 @@
 <body>
     <h1> Youtube to mp3 convertor</h1>
     
+    <div class="top-container">
+        <form action="convert" methods="POST" id="form">
+            <h1>Youtube >> MP3 Convertor</h1>
+            <h4>Enter Youtube Link!</h4>
+
+            <div>
+                <input type="text" name="videoLink" placeholder="Video Link"><button id="convert-btn">Convert</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="bottom-container">
+    <!-- ejs using java script directly in html -->
+        <% if(type of success != "undefined" && success) { %> 
+            <div class="success">
+                <p><%= song_title %></p>
+                <a href="<%= song_link %>"><button id="download-btn"> Download</button></a>
+            </div>
+        <% } else if(typeof success != "undefined" && !success) { %>
+            
+        <div class="error">
+            <p> <%= message %></p>
+        </div>
+        <% } %>           
+    </div>
+
 </body>
 </html>
