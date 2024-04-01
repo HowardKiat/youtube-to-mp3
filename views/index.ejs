@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Youtube to mp3 convertor</title>
+    <title>Youtube to mp3 converter</title>
 </head>
 <body>
     <div class="top-container">
-        <form action="convert" methods="POST" id="form">
-            <h1>Youtube 2 MP3 Convertor</h1>
+        <form action="/convert-mp3" method="POST" id="form">
+            <h1>Youtube to MP3 Converter</h1>
             <h4>Enter Youtube Link!</h4>
 
             <div>
-                <input type="text" name="videoLink" placeholder="Video Link"><button id="convert-btn">Convert</button>
+                <input type="text" name="videoLink" placeholder="Video Link"><button type="submit" id="convert-btn">Convert</button>
             </div>
 
         </form>
     </div>
 
     <div class="bottom-container">
-    <!-- ejs using java script directly in html -->
-        <% if(typeof success != "undefined" && success) { %> 
+        <% if(typeof success !== "undefined" && success) { %> 
             <div class="success">
                 <p><%= song_title %></p>
-                <a href="<%= song_link %>"><button id="download-btn"> Download</button></a>
+                <a href="<%= song_link %>"><span id="download-btn"> Download</span></a>
             </div>
-        <% } else if(typeof success != "undefined" && !success) { %>
+        <% } else if(typeof success !== "undefined" && !success) { %>
             
         <div class="error">
             <p> <%= message %></p>
