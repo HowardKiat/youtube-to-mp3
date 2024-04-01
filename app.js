@@ -61,3 +61,7 @@ app.use(express.static("public"));
 app.listen(PORT, () => {
     console.log(`Server Started port ${PORT}`);
 });
+
+// EXTRA FEATURES
+// - ADD REFRESH DOWNLOAD AFTER THE SONGS HAS BEEN DOWNLOADED
+// - Selecting downloading Quality
